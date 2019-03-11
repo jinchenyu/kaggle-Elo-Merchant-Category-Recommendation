@@ -5,12 +5,14 @@
 
 由于target(信用卡忠诚度)分布满足符合正太分布的同时，有少量严重偏离期望的离群值，如下图
 
+![target分布.png](https://github.com/jinchenyu/kaggle-Elo-Merchant-Category-Recommendation/blob/master/images-flods/target分布.png)
 
 而本题使用RMSE评测指标，RMSE对异常值敏感，所以合理预测异常值，就是本题关键，也就是为什么会有选手，在public board进行修改异常值，以大幅提分
 
 如果直接使用回归模型预测，模型无法较好的学习到正太分布部分，直接预测分布如下
 
-![target分布.png](https://github.com/jinchenyu/kaggle-Elo-Merchant-Category-Recommendation/blob/master/images-flods/target分布.png)
+![直接预测分布.png](https://github.com/jinchenyu/kaggle-Elo-Merchant-Category-Recommendation/blob/master/images-flods/直接预测分布.png)
+
 
 可以看到，模型非常倾向于负值
 
