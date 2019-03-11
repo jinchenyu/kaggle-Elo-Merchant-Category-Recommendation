@@ -10,6 +10,8 @@
 
 如果直接使用回归模型预测，模型无法较好的学习到正太分布部分，直接预测分布如下
 
+![target分布.png](https://github.com/jinchenyu/kaggle-Elo-Merchant-Category-Recommendation/blob/master/images-flods/target分布.png)
+
 可以看到，模型非常倾向于负值
 
 所以我们在此，使用去掉异常值的回归模型，来保证预测结果的正太分布的同时，使用二分类模型，对异常值进行预测。
